@@ -1,20 +1,22 @@
-// eslint-disable-next-line no-undef
-export class ShopItemClass extends React.Component {
+import { Component } from "react"
+export class ShopItemClass extends Component {
+     
     render(){
+                
         return (
-            <div class="main-content">
-                <h2>{this.brand}</h2>
-                <h1>{this.title}</h1>
-                <h3>{this.description}</h3>
-                <div class="description">
-                    {this.descriptionFull}
+            <div className="main-content">
+                <h2>{this.props.brand}</h2>
+                <h1>{this.props.title}</h1>
+                <h3>{this.props.description}</h3>
+                <div className="description">
+                    {this.props.descriptionFull}
                 </div>
-                <div class="highlight-window mobile">
+                <div className="highlight-window mobile">
                     <div class="highlight-overlay"></div>
                 </div>
-                <div class="divider"></div>
-                <div class="purchase-info">
-                    <div class="price">{this.currency}{this.price}</div>
+                <div className="divider"></div>
+                <div className="purchase-info">
+                    <div className="price">{this.props.currency}{this.props.price}</div>
                     <button>Добавить в корзину</button>
                 </div>
             </div>
