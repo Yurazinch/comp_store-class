@@ -1,11 +1,8 @@
 import { Component } from "react"
 export class ShopItemClass extends Component {
-     constructor(item) {
-        super(item);
-        this.item = item;
-     }
+    
     render(){
-                const {brand, title, description, descriptionFull, currency, price} = this.item;
+        const {brand, title, description, descriptionFull, currency, price} = this.props.item;
         return (
             <div className="main-content">
                 <h2>{brand}</h2>
